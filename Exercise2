@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Exercise_2 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int num1 = 0;
+        int count1 = 0;
+        int count2 = 0;
+
+        System.out.println("Задайте значение M ,которое меньше последующего(n)");
+        int m = scan.nextInt();
+
+        System.out.println("Задайте значение N,которое больше m  ");
+        int n = scan.nextInt();
+
+
+        if(n<=m){
+            System.out.println("Неправильно задан диапазон");
+            return;
+        }
+        else  {
+            for (int x =1+m;x<n;x++){
+                int num2 =x;
+                while (num2!=0){
+                    num1=num2%10;
+                    num2/=10;
+
+                    if(num1 ==0)
+                        count1++;
+
+                    if (num1 == 1)
+                        count2++;
+                }
+            }
+        }
+        System.out.println("Нулей в диапазоне: " +count1 + "\nЕдиниц в диапазоне: " +count2);
+        System.out.println("Общее количество единиц и нулей: " + (count1 + count2));
+    }
+}
