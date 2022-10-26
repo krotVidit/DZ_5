@@ -1,0 +1,16 @@
+public class Exercise_1 {
+    public static void main(String[] args) {
+
+
+        System.out.println("|От 11 до 32|\n");
+        for (int x = 11, y = x; x < 33; x++, y++)
+            System.out.print((x * y) + "\t\t");
+        System.out.println();
+
+        for (int x = 11; x < 33; x++)
+            System.out.print(x + "*" + x +"\t");
+
+        System.out.println("\n");
+
+    }
+    }
